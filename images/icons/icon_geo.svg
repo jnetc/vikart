@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.7 40.4">
+  <defs>
+    <style>
+      #icon {
+        fill: none;
+        stroke: #E39040;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <path id="icon" d="M100,81.4A10.9,10.9,0,0,0,89.1,92.2c0,6,10.9,26.4,10.9,26.4s10.9-20.4,10.9-26.4A10.9,10.9,0,0,0,100,81.4Zm0,16.6a6.1,6.1,0,1,1,6.1-6.1A6.1,6.1,0,0,1,100,97.9Z" transform="translate(-88.1 -80.4)"/>
+</svg>

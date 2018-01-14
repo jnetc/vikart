@@ -1,0 +1,2037 @@
+// out: ../css/main.css, compress: true
+//////////////////////////////////////////////////////
+//////// ЦВЕТА */
+@oranj: rgb(255, 138, 52);
+// @oranj: #E39040;
+// @oranj: #c5712a;
+@belii: #fff;
+@svetloserii: #d3d3d3;
+@chernii: #000000;
+
+//////////////////////////////////////////////////////
+//////// ФЛЕКСЫ
+
+.flex {
+  display: flex;
+  display: -webkit-flex;
+}
+.justify-center {
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
+  -webkit-justify-content: space-around;
+}
+.justify-end {
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+}
+.align {
+  align-items: center;
+  -webkit-align-items: center;
+}
+.aling-end {
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+}
+.flex-column {
+  flex-flow: column;
+  -webkit-flex-flow: column;
+}
+.flex-row {
+  flex-flow: row;
+  -webkit-flex-flow: row;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+
+
+//////////////////////////////////////////////////////
+//////// Основные
+
+* {
+	outline: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  background: @chernii;
+}
+ul {
+  list-style: none;
+}
+li {
+  font-family: 'Courier';
+}
+a,
+a:active,
+a:focus,
+a:hover {
+  color: @chernii;
+ 	text-decoration: none;
+}
+a:hover {
+  color: @oranj;
+}
+::selection {
+  background: @oranj * 1.3;
+}
+
+//////////////////////////////////////////////////////
+//////// Шрифты
+
+@font-face {
+	font-family: 'Exo2-medium';
+	src: url('../fonts/exo2-medium.woff') format('woff');
+}
+@font-face {
+	font-family: 'Exo2-light';
+	src: url('../fonts/exo2-light.woff') format('woff');
+}
+@font-face {
+	font-family: 'Russo';
+	src: url('../fonts/russoone.woff') format('woff');
+}
+@font-face {
+	font-family: 'Courier';
+	src: url('../fonts/courier.woff') format('woff');
+}
+@font-face {
+	font-family: 'DisneyPark';
+	src: url('../fonts/disneypark.woff') format('woff');
+}
+@font-face {
+	font-family: 'PressStart';
+	src: url('../fonts/pressstart2p.woff') format('woff');
+}
+
+//////////////////////////////////////////////////////
+//////// Навигация
+
+
+#checkbox {
+  display: none;
+  + label {
+    // display: none;
+    width: 60px;
+    height: 60px;
+    margin-left: -550px;
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    border-radius: 50%;
+    background: @oranj;
+    box-shadow: 0 0px 40px 5px rgba(255, 138, 52, 0.7);
+    -webkit-box-shadow: 0 0px 40px 5px rgba(255, 138, 52, 0.7);
+    -moz-box-shadow: 0 0px 40px 5px rgba(255, 138, 52, 0.7);
+    transform: translate3d(-50%, 0, 0);
+    -webkit-transform: translate3d(-50%, 0, 0);
+    -moz-transform: translate3d(-50%, 0, 0);
+    cursor: pointer;
+    z-index: 102;
+    .mouse-hover;    
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      background: @oranj;
+      animation: more-rev 3s linear infinite;
+      -webkit-animation: more-rev 3s linear infinite;
+      z-index: 1;
+    }
+    span.line-top {
+      width: 35px;
+      height: 5px;
+      display: block;
+      position: relative;
+      top: 18px;
+      left: 13px;
+      background: @chernii;
+      transform-origin: left center;
+      z-index: 105;
+      .mouse-hover;
+      &::after {
+        content: '';
+        width: inherit;
+        height: inherit;
+        display: inherit;
+        position: absolute;
+        top: 9px;
+        left: 0px;
+        background: inherit;
+        .mouse-hover;
+      }
+    }
+    span.line-bottom {
+      width: 35px;
+      height: 5px;
+      display: block;
+      position: relative;
+      top: 31px;
+      left: 13px;
+      background: @chernii;
+      transform-origin: left center;
+      z-index: 105;
+      .mouse-hover;
+    }
+    p {
+      width: 150px;
+      padding: 5px;
+      position: relative;
+      top: -2px;
+      left: 67px;
+      opacity: 0;
+      color: @chernii;
+      font-size: 25px;
+      text-align: center;
+      font-family: 'Courier';
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border-radius: 10px;
+      background: @oranj;
+      box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+      transform-origin: left center;    
+      animation: tooltip 6s cubic-bezier(0.04, 1.14, 0.58, 1) forwards;
+      -webkit-animation: tooltip 6s cubic-bezier(0.04, 1.14, 0.58, 1) forwards;
+      animation-delay: 3s;
+      -webkit-animation-delay: 3s;
+      pointer-events: none;
+      &::before {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 13px;
+        left: -6px;
+        border-color:  transparent @oranj transparent transparent;
+        border-style: solid;
+        border-width: 7px 7px 7px 0px;
+      }
+    }
+  }
+  &:checked ~ label {
+    margin-left: 0px;
+    transition-delay: 0.1s;
+  }
+  &:checked ~ label > span.line-top {
+    transform: rotateZ(45deg) translate(0px, -5px);
+    &::after {
+      opacity: 0;
+    }
+  }
+  &:checked ~ label > span.line-bottom {
+    transform: rotateZ(-45deg) translate(0px, 5px);
+  }
+  &:checked ~ nav {
+    animation: menu-show 0.3s ease-in forwards;
+    -webkit-animation: menu-show 0.3s ease-in forwards;
+  }
+}
+
+///// Анимация для кнопки меню
+@keyframes menu-show {
+  0% {transform: translate3d(-50%, 0%, 0) scale(0.01); opacity: 0;}
+  100% {transform: translate3d(-50%, 0%, 0) scale(1); opacity: 1}
+}
+@-webkit-keyframes menu-show {
+  0% {transform: translate3d(-50%, 0%, 0) scale(0.01); opacity: 0;}
+  100% {transform: translate3d(-50%, 0%, 0) scale(1); opacity: 1}
+}
+@keyframes menu-show-rev {
+  0% {transform: translate3d(-50%, 0%, 0) scale(1); opacity: 1}
+  100% {transform: translate3d(-50%, 0%, 0) scale(0.01); opacity: 0;}
+}
+@-webkit-keyframes menu-show-rev {
+  0% {transform: translate3d(-50%, 0%, 0) scale(1); opacity: 1}
+  100% {transform: translate3d(-50%, 0%, 0) scale(0.01); opacity: 0;}
+}
+///// Анимация для подсказки
+@keyframes tooltip {
+  0% {transform: translateX(-20px) scale(0.5); opacity: 0;}
+  5% {transform: translateX(5px) scale(1.1); opacity: 1;}
+  10% {transform: translateX(0px); opacity: 1;}
+  90% {transform: translateX(0px); opacity: 1;}
+  95% {transform: translateX(5px) scale(1.1); opacity: 1;}
+  100% {transform: translateX(-20px) scale(0.5); opacity: 0;}
+}
+
+nav {
+  width: 1200px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  background:rgba(0, 0, 0, 1);
+  transform-origin: left top;
+  -webkit-transform-origin: left top;
+  animation: menu-show-rev 0.3s ease-out forwards;
+  -webkit-animation: menu-show-rev 0.3s ease-out forwards;
+  .mouse-hover;
+  z-index: 101;
+  ul.all-category {
+    width: 300px;
+    height: auto;
+    margin: auto;
+    .flex;
+    .flex-column;
+    position: relative;
+    top: 100px;
+    font-size: 20px;
+    font-family: 'Courier';
+    li.category {
+      margin: 5px 0;
+      position: relative;
+      overflow: hidden;
+
+      // ЯЗЫКОВАЯ ПАНЕЛЬ
+      &:nth-of-type(1) {
+        width: 100%;;
+        height: auto;
+        margin: auto;
+        padding: 20px 7px 50px;
+        position: relative;
+        &::after {
+          content: '';
+          width: 350px;
+          height: 2px;
+          display: block;
+          position: absolute;
+          left: 50%;
+          bottom: 23px;
+          opacity: 0.6;
+          background: center no-repeat url(../images/line.png);
+          transform: translate(-50%, 0%);
+          -webkit-transform: translate(-50%, 0%);
+          -moz-transform: translate(-50%, 0%);
+          z-index: -5;
+        }
+        ul.box-language {
+          .flex;
+          .justify-around;
+          .flex-row;
+          li {
+            width: 70px;
+            height: 70px;
+            .flex;
+            .justify-center;
+            .align;
+            // margin: 7px;
+            padding-bottom: 3px;
+            position: relative;
+            color: @oranj;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 138, 52, 0.5);
+            box-shadow: inset 0 0 50px 0px rgba(255, 138, 52, 0.4);
+            -webkit-box-shadow: inset 0 0 50px 0px rgba(255, 138, 52, 0.4);
+            -moz-box-shadow: inset 0 0 50px 0px rgba(255, 138, 52, 0.4);
+            .mouse-hover;
+            &::before {
+              content: "";
+              width: 100%;
+              height: 100%;
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              animation: more-rev 3s linear infinite;
+              -webkit-animation: more-rev 3s linear infinite;
+              border-radius: 50%;
+              z-index: 1;
+            }
+            &:not(.lang) {
+              cursor: pointer;
+              &:hover {
+                color: @belii;
+                border-color: rgba(255, 138, 52, 1);
+                background: rgba(255, 138, 52, 0.4);
+              }
+            }
+          }
+          // Фокус языковой кнопки страницы
+          li.lang {
+            color: @belii;
+            border-color: rgba(255, 138, 52, 0);
+            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            &::before {
+              content: "";
+              width: 100%;
+              height: 100%;
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              border-radius: 50%;
+              animation: more-rev 3s linear infinite;
+              -webkit-animation: more-rev 3s linear infinite;
+              animation-delay: 5s;
+              -webkit-animation-delay: 5s;
+              z-index: 1;
+            }
+          }
+        }
+      }
+
+      // ГАРМОШКА МЕНЮ
+      input {
+        width: 100%;
+        height: 60px;
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 102;
+        &:checked ~ ul.box-category {
+          max-height: 300px;
+        }
+        &:hover ~ ul.box-category > .group-list {
+          background: rgba(255, 138, 52, 0.5);
+        }
+        &:checked ~ ul.box-category > .group-list {
+          color: @belii;
+          background: rgba(255, 138, 52, 0.8);
+          &::before {
+            opacity: 0;
+          }
+          &::after {
+            background: @belii;
+          }
+        }
+      }
+      ul.box-category {
+        max-height: 50px;
+        .flex;
+        .flex-column;
+        position: relative;
+        transition: 0.3s cubic-bezier(0.47, 0.07, 0.03, 1.29);
+        -webkit-transition: 0.3s cubic-bezier(0.47, 0.07, 0.03, 1.29);
+        -moz-transition: 0.3s cubic-bezier(0.47, 0.07, 0.03, 1.29);
+        li {
+          width: 100%; 
+          color: @belii;
+          z-index: 7;
+        }
+        li.group-list {
+          max-height: 60px;
+          padding: 15px 0 15px 40px;
+          font-size: 23px;
+          border: 1px solid @oranj;
+          background: rgba(255, 138, 52, 0.1);
+          z-index: 7;
+          .mouse-hover;
+          &::after {
+            content: '';
+            width: 13px;
+            height: 3px;
+            position: absolute;
+            top: 30px;
+            left: 12px;
+            background: @oranj;
+            .mouse-hover;
+          }
+          &::before {
+            content: '';
+            width: 3px;
+            height: 13px;
+            position: absolute;
+            top: 25px;
+            left: 17px;
+            background: @oranj;
+            animation: more-rev 3s linear infinite;
+            -webkit-animation: more-rev 3s linear infinite;
+            animation-delay: 10s;
+            -webkit-animation-delay: 10s;
+            .mouse-hover;
+          }
+        }
+        // Линки сайта
+        a.link {
+          height: 40px;
+          .flex;
+          .align;
+          padding-left: 5px;
+          color: @belii;
+          border-left: 7px solid transparent;
+          background: transparent;
+          .mouse-hover;
+          &:hover {
+            padding-left: 15px;
+            border-left: 7px solid @oranj;
+            background: rgba(255, 138, 52, 0.3);
+            background: linear-gradient(to right, rgba(255, 138, 52, 0.3) 50%, rgba(255, 138, 52, 0.0));
+            background: -webkit-linear-gradient(to right, rgba(255, 138, 52, 0.3) 50%, rgba(255, 138, 52, 0.0));
+          }
+        }
+        // Адресные строки
+        li.adress {
+          height: auto;
+          .flex;
+          .flex-column;
+          padding: 15px 0 10px 5px;
+          position: relative;
+        }
+        // Адресная кнопка
+        li.adress-btn {
+          width: 220px;
+          height: auto;
+          margin: auto;
+          padding: 20px 0;
+          position: relative;
+          &:hover a {
+            color: @belii;
+            border-color: rgba(255, 138, 52, 0);
+            transform: scale(1);
+          }
+          a {
+            width: 220px;
+            height: 60px;
+            .flex;
+            .justify-center;
+            .align;
+            margin: auto;
+            padding-bottom: 3px;
+            position: relative;
+            color: @oranj;
+            border-radius: 50px;
+            border: 3px solid rgba(255, 138, 52, 0.5);
+            box-shadow: inset 0 0 50px 0px rgba(255, 138, 52, 0.4);
+            -webkit-box-shadow: inset 0 0 50px 0px rgba(255, 138, 52, 0.4);
+            -moz-box-shadow: inset 0 0 50px 0px rgba(255, 138, 52, 0.4);
+            .mouse-hover;
+            &::before {
+              content: "";
+              width: 100%;
+              height: 100%;
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              border-radius: 50px;
+              animation: more-rev 3s linear infinite;
+              -webkit-animation: more-rev 3s linear infinite;
+              animation-delay: 5s;
+              -webkit-animation-delay: 5s;
+              z-index: 1;
+            }
+          }
+        }
+        // Параметр под кнопки
+        .btn-category {
+          .flex;
+          .justify-center;
+          .flex-wrap;
+          margin: 15px 0 0;
+          padding-bottom: 30px;
+          position: relative;
+          &::after {
+            content: '';
+            width: 350px;
+            height: 2px;
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: 15px;
+            opacity: 0.6;
+            background: center no-repeat url(../images/line.png);
+            transform: translate(-50%, 0%);
+            -webkit-transform: translate(-50%, 0%);
+            -moz-transform: translate(-50%, 0%);
+            z-index: -5;
+          }
+        }
+        .btn-category li {
+          width: 70px;
+          height: auto;
+          margin: auto;
+          padding: 10px 0;
+          &:hover a {
+            color: @belii;
+            border-color: rgba(255, 138, 52, 1);
+            background: rgba(255, 138, 52, 0.4);
+          }
+          a {
+            width: 70px;
+            height: 70px;
+            .flex;
+            .justify-center;
+            .align;
+            padding-bottom: 3px;
+            position: relative;
+            color: @oranj;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 138, 52, 0.5);
+            box-shadow: inset 0 0 50px 0px rgba(255, 138, 52, 0.4);
+            -webkit-box-shadow: inset 0 0 50px 0px rgba(255, 138, 52, 0.4);
+            -moz-box-shadow: inset 0 0 50px 0px rgba(255, 138, 52, 0.4);
+            .mouse-hover;
+            &::before {
+              content: "";
+              width: 100%;
+              height: 100%;
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              border-radius: 50%;
+              z-index: 1;
+            }
+            svg {
+              fill: @oranj;
+              .mouse-hover;
+            }
+            &:hover svg {
+              fill: @belii;
+            }
+            .icon-fb {
+              width: 35px;
+              height: 30px;
+            }
+            .icon-vk {
+              width: 40px;
+              display: block;
+              position: relative;
+              top: 2px;
+              left: 0px;;
+            }
+            .icon-ins {
+              width: 35px;
+            }
+          }
+        }
+      }
+      // Рамка под последний блок
+      ul.box-category.add-bottom {
+        max-height: 60px;
+      }
+    }
+  }
+}
+
+//////////////////////////////////////////////////////
+//////// Базовый блок
+
+main {
+  width: 1200px;
+  min-height: 100%;
+  margin: 0px auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.block-0 {
+  width: 100%;
+  height: 650px;
+  margin: 0px;
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: center no-repeat url(../images/block0.jpg);
+    animation: head 3s 0.5s ease-in-out forwards;
+    -webkit-animation: head 3s 0.5s ease-in-out forwards;
+  }
+}
+.logo {
+  width: 600px;
+  height: 210px;
+  display: block;
+  margin: 0px auto;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  color: @oranj;
+  font-size: 45pt;
+  font-family: "DisneyPark";
+  text-transform: uppercase;
+  background: no-repeat url(../images/logo.svg);
+  z-index: 15;
+  &::before {
+    content: "VIKART";
+    position: absolute;
+    right: -30px;
+    bottom: -15px;
+  }
+}
+.block-1,
+.block-2,
+.block-3,
+.block-4,
+.block-5,
+.block-6 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: @chernii;
+}
+
+//////////////////////////////////////////////////////
+//////// Первый блок - О нас
+
+.block-1 {
+  padding-top: 100px;
+}
+.bg-block-1 {
+  width: 100%;
+  height: 925px;
+  .flex;
+  .justify-center;
+  .align;
+  .flex-column;
+  margin: 0px;
+  bottom: 0px;
+  overflow: hidden;
+  background: bottom no-repeat url(../images/block1.jpg);
+  animation: hide-about-rev 0.5s cubic-bezier(0, 0.35, 0, 1.24) forwards;
+  -webkit-animation: hide-about-rev 0.5s cubic-bezier(0, 0.35, 0, 1.24) forwards;
+}
+.about {
+  width: 55%;
+  margin-top: 150px;
+  align-self: flex-end;
+  -webkit-align-self: flex-end;
+  > span {
+    width: 90%;
+    display: block;
+    margin: 0px auto;
+    color: @belii;
+    font-size: 55pt;
+    text-align: center;
+    font-family: "Russo";
+    text-transform: uppercase;
+    .mouse-hover;
+  }
+  article {
+    width: 90%;
+    display: block;
+    margin: 25px auto;
+    color: @svetloserii;
+    font-size: 14pt;
+    font-family: 'Exo2-medium';
+  }
+  a {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 25px auto;
+    position: relative;
+    opacity: 1;
+    border-radius: 50%;
+    background: @oranj;
+    box-shadow: 0 -5px 40px 5px rgba(255, 138, 52, 0.7);
+    -webkit-box-shadow: 0 -5px 40px 5px rgba(255, 138, 52, 0.7);
+    -moz-box-shadow: 0 -5px 40px 5px rgba(255, 138, 52, 0.7);
+    cursor: pointer;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      background: @oranj;
+      animation: more-rev 3s linear infinite;
+      -webkit-animation: more-rev 3s linear infinite;
+      z-index: 1;
+    }
+    &:hover span {
+      animation: more-arrow 0.3s ease-in-out forwards;
+      -webkit-animation: more-arrow 0.3s ease-in-out forwards;
+    }
+    span {
+      width: 50px;
+      height: 50px;
+      .flex;
+      .justify-center;
+      .align;
+      position: absolute;
+      top: 6px;
+      left: 8px;
+      color: @chernii;
+      font-size: 40pt;
+      font-family: "Russo";
+      transform: rotateZ(90deg);
+      -webkit-transform: rotateZ(90deg);
+      -moz-transform: rotateZ(90deg);
+      z-index: 3;
+      .mouse-hover;
+    }
+  }
+}
+.about a:hover::before {
+  animation: more 0.3s ease-in forwards;
+  -webkit-animation: more 0.3s ease-in forwards;
+}
+
+// Дополнительное описание о театре
+.about-more {
+  width: 100%;
+  height: 0px;
+  display: none;
+  position: absolute;
+  opacity: 0;
+  color: @svetloserii;
+  background: @chernii;
+  transform: translate3d(0px, -100px, 0px);
+  -webkit-transform: translate3d(0px, -100px, 0px);
+  -moz-transform: translate3d(0px, -100px, 0px);
+  -ms-transform: translate3d(0px, -100px, 0px);
+  animation: show-more-rev 0.5s cubic-bezier(0, 0.35, 0.35, 2.08) forwards;
+  -webkit-animation: show-more-rev 0.5s cubic-bezier(0, 0.35, 0.35, 2.08) forwards;
+  z-index: 10;
+  .director {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: right;
+    border-radius: 50%;
+    order: 2;
+    z-index: 2;
+    div:nth-last-of-type(1) {
+      width: 240px;
+      padding-right: 20px;
+      font-family: "Russo";
+      z-index: 2;
+      p:nth-of-type(1) {
+        color: @oranj;
+        font-size: 30pt;
+      }
+      p:nth-of-type(2) {
+        font-size: 20pt;
+      }
+    }
+    div:nth-last-of-type(2) {
+      width: 277px;
+      height: 277px;
+      position: relative;
+      display: block;
+      border-radius: 50%;
+      order: 1;
+      z-index: 2;
+    }
+    img {
+      width: 245px;
+      height: 245px;
+      display: block;
+      margin: auto;
+      position: relative;
+      top: 15px;
+      left: 0px;
+      border-radius: 50%;
+      z-index: 4;
+    }
+  }
+  p {
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 25px auto 0px;
+    position: relative;
+    font-size: 14pt;
+    font-family: "Exo2-medium";
+  }
+  a {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 25px auto;
+    position: relative;
+    opacity: 1;
+    border-radius: 50%;
+    background: @oranj;
+    box-shadow: 0 -5px 40px 5px rgba(255, 138, 52, 0.7);
+    -webkit-box-shadow: 0 -5px 40px 5px rgba(255, 138, 52, 0.7);
+    -moz-box-shadow: 0 -5px 40px 5px rgba(255, 138, 52, 0.7);
+    cursor: pointer;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      background: @oranj;
+      animation: more-rev 3s linear infinite;
+      -webkit-animation: more-rev 3s linear infinite;
+      z-index: 1;
+    }
+    span.close-btn {
+      width: 35px;
+      height: 5px;
+      display: block;
+      position: relative;
+      top: 18px;
+      left: 14px;
+      background: @chernii;
+      transform-origin: left center;
+      -webkit-transform-origin: left center;
+      transform: rotateZ(45deg) translate(0px, -5px);
+      -webkit-transform: rotateZ(45deg) translate(0px, -5px);
+      -moz-transform: rotateZ(45deg) translate(0px, -5px);
+      z-index: 105;
+      pointer-events: none;
+      &::after {
+        content: '';
+        width: inherit;
+        height: inherit;
+        display: inherit;
+        position: absolute;
+        top: 18px;
+        left: 12px;
+        background: inherit;
+        transform-origin: inherit;
+        -webkit-transform-origin: inherit;
+        transform: rotateZ(-90deg) translate(0px, 5px);
+        -webkit-transform: rotateZ(-90deg) translate(0px, 5px);
+        -moz-transform: rotateZ(-90deg) translate(0px, 5px);
+
+      }
+    }
+  }
+}
+
+
+
+// JQuery классы
+.about-hide {
+  animation: hide-about 0.5s cubic-bezier(0, 0.35, 0, 0.99) forwards;
+  -webkit-animation: hide-about 0.5s cubic-bezier(0, 0.35, 0, 0.99) forwards;
+}
+.about-more-show {
+  display: block;
+  position: relative;
+  animation: show-more 0.5s cubic-bezier(0, 0.35, 0.35, 2.08) forwards;
+  -webkit-animation: show-more 0.5s cubic-bezier(0, 0.35, 0.35, 2.08) forwards;
+}
+
+//////////////////////////////////////////////////////
+//////// Второй блок - Афиша
+
+.block-2 {
+  width: 100%;
+  height: 476px;
+  .flex;
+  .justify-center;
+  .align;
+  overflow: hidden;
+  background: center no-repeat url(../images/block2.jpg);
+  z-index: 10;
+  span {
+    position: relative;
+    color: #e6e6e6;
+    font-size: 55pt;
+    font-family: "Russo";
+    text-transform: uppercase;
+    transform: matrix(1.2, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1.2, 0, 0, 1, 0, 0);
+    -moz-transform: matrix(1.2, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(1.2, 0, 0, 1, 0, 0);
+  }
+}
+
+//////////////////////////////////////////////////////
+//////// Третий блок - Расписание
+
+.timetable {
+  width: 100%;
+  margin: 0 auto 65px;
+  padding: 0 15px;
+  opacity: 1;
+  &::after {
+    content: '';
+    max-width: 500px;
+    height: 2px;
+    margin: 25px auto 0;
+    position: absolute;
+    right: 0px;
+    left: 300px;
+    opacity: 0.6;
+    background: center no-repeat url(../images/line.png);
+    z-index: 101;
+  }
+  time {
+    width: 100%;
+    height: 73px;
+    .flex;
+    .align;
+    margin-top: 40px;
+    position: relative;
+    font-family: "Russo";
+    text-transform: uppercase;
+    div:nth-of-type(1) {
+      display: block;
+      padding-left: 35px;
+      font-size: 55pt;
+      color: @belii;
+      z-index: 5;
+    }
+    div:nth-of-type(2) {
+      width: 170px;
+      height: 60px;
+      padding-left: 10px;
+      p:nth-of-type(1) {
+        color: @belii;
+        font-size: 20pt;
+      }
+      p:nth-of-type(2) {
+        font-size: 18pt;
+        color: @oranj;
+      }
+    }
+  }
+}
+// Блок афишы
+.description {
+  width: 100%;
+  height: auto;
+  margin: 10px 0px 0px;
+  .flex;
+  flex-flow: row wrap;
+  position: relative;
+  font-family: "Courier";
+  background: @chernii;
+  // border: 1px solid red;
+  .mouse-hover;
+  // Афиша спектакля
+  figure {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      box-shadow: inset 0px -20px 30px 0px rgba(0, 0, 0, 1);
+      -webkit-box-shadow: inset 0px -20px 30px 0px rgba(0, 0, 0, 1);
+      -moz-box-shadow: inset 0px -20px 30px 0px rgba(0, 0, 0, 1);
+      z-index: 5;
+    }
+    img {
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      border-radius: 50%;
+      filter: grayscale(1);
+      -webkit-filter: grayscale(1);
+    }
+  }
+  // Описание спектакля
+  ul.info {
+    width: 300px;
+    height: 100%;
+    max-height: 300px;
+    .flex;
+    flex-flow: column;
+    flex: 1 1 auto;
+    position: relative;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    z-index: 1;
+    &::after {
+      content: '';
+      width: 100%;
+      height: 80px;
+      position: absolute;
+      bottom: 0px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+      background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+      z-index: 1;
+    }
+    // Параграфы
+    li {
+      width: 100%;
+      padding: 15px 20px 0px;
+      font-family: 'Courier';
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        padding-top: 0px;
+      }
+    }
+    h2 {
+      color: @belii;
+      font-size: 28pt;
+      font-weight: 100;
+    }
+    sup {
+      color: @oranj;
+      opacity: 0.8;
+      font-size: 11pt;
+      text-transform: capitalize;
+    }
+    p {
+      color: @belii - 80;
+      font-size: 14pt;
+    }
+    strong {
+      color: @oranj;
+      opacity: 0.7;
+    }
+    sub {
+      font-size: 11pt;
+      color: @belii - 80;
+    }
+    .info-end {
+      width: 100%;
+      height: 80px;
+      display: block;
+    }
+  }
+}
+
+// Кнопка заказа билета
+.ticket-btn {
+  width: 170px;
+  height: 60px;
+  margin: auto;
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  overflow: hidden;
+  opacity: 1;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  background: @oranj;
+  transition: 0.3s cubic-bezier(0, 1.01, 0.24, 1.45);
+  -webkit-transition: 0.3s cubic-bezier(0, 1.01, 0.24, 1.45);
+  -moz-transition: 0.3s cubic-bezier(0, 1.01, 0.24, 1.45);
+  z-index: 10;
+  &:hover {
+    width: 200px;
+    height: 60px;
+    border-color: @oranj;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    p {
+      color: @oranj;
+    }
+    p::before {
+      opacity: 1;
+      color: @oranj;
+      transform: translate(0px);
+    }
+  }
+  p {
+    width: 170px;
+    height: 60px;
+    .flex;
+    .justify-center;
+    .align;
+    position: relative;
+    top: -1px;
+    color: @chernii;
+    font-size: 22pt;
+    font-family: 'Russo';
+    text-transform: uppercase;
+    .mouse-hover;
+    &::before {
+      content: '»';
+      width: inherit;
+      height: inherit;
+      .flex;
+      .justify-center;
+      .align;
+      position: absolute;
+      top: -4px;
+      left: 85px;
+      opacity: 0;
+      font-size: 40pt;
+      font-family: 'Russo';
+      transform: translate(10px);
+      -webkit-transform: translate(10px);
+      -moz-transform: translate(10px);
+      .mouse-hover;
+      z-index: 15;
+    }
+  }
+}
+
+// Кнопка показа содержимого
+.info-btn {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 25px;
+  position: absolute;
+  right: 0px;
+  left: 300px;
+  bottom: -30px;
+  opacity: 1;
+  border-radius: 50%;
+  background: @oranj;
+  box-shadow: 0 -5px 40px 5px rgba(255, 138, 52, 0.7);
+  -webkit-box-shadow: 0 -5px 40px 5px rgba(255, 138, 52, 0.7);
+  -moz-box-shadow: 0 -5px 40px 5px rgba(255, 138, 52, 0.7);
+  .mouse-hover;
+  cursor: pointer;
+  z-index: 10;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    background: @oranj;
+    animation: more-rev 3s linear infinite;
+    -webkit-animation: more-rev 3s linear infinite;
+    z-index: 1;
+  }
+  &:hover span {
+    animation: more-arrow 1s ease-in-out forwards;
+    -webkit-animation: more-arrow 1s ease-in-out forwards;
+  }
+  span {
+    width: 50px;
+    height: 50px;
+    .flex;
+    .justify-center;
+    .align;
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    color: @chernii;
+    font-size: 40pt;
+    font-family: "Russo";
+    transform-origin: center;
+    -webkit-transform-origin: center;
+    transform: rotateZ(90deg);
+    -webkit-transform: rotateZ(90deg);
+    -moz-transform: rotateZ(90deg);
+    z-index: 3;
+    .mouse-hover;
+  }
+  
+}
+// JS ксласс для кнопки
+.descript-hide {
+  transform: rotateZ(180deg);
+  -webkit-transform: rotateZ(180deg);
+  -moz-transform: rotateZ(180deg);
+}
+// JS класс для Афиши
+.descript-all {
+  max-height: 700px !important;
+}
+
+//////////////////////////////////////////////////////
+//////// Четвертый блок - Робот
+
+.block-4 {
+  height: 907px;
+  overflow: hidden;
+  color: @chernii;
+  font-family: "Exo2-medium";
+  background: @belii;
+  background: center no-repeat url(../images/block4.jpg);
+  &::before {
+    content: "";
+    width: 0;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    border-color: transparent @chernii transparent transparent;
+    border-style: solid;
+    border-width: 0px 1200px 120px 0px; 
+    z-index: 15;
+  }
+  p:nth-of-type(1) {
+    width: 60%;
+    position: absolute;
+    bottom: 90px;
+    right: 50px;
+    font-size: 13pt;
+    line-height: 20px;
+  }
+  p:nth-of-type(2) {
+    position: absolute;
+    bottom: 60px;
+    right: 80px;
+    font-size: 10pt;
+  }
+}
+.parallax-robot {
+  width: 100%;
+  height: 499px;
+  margin: 0px;
+  position: absolute;
+  top: -340px;
+  background: center no-repeat url(../images/robot.png);
+  z-index: 5;
+}
+
+//////////////////////////////////////////////////////
+//////// Пятый блок - Актёры
+
+.block-5 {
+  padding-top: 140px;
+  background: center no-repeat url(../images/block5.jpg);
+  background-position: center 15px;
+  background-size: 1100px 810px;
+  &::before {
+    content: "";
+    width: 0;
+    height: 10px;
+    display: block;
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    border-color: transparent transparent transparent @belii ;
+    border-style: solid;
+    border-width: 0 0 120px 1200px; 
+    z-index: 15;
+  }
+  &::after {
+    content: "";
+    width: 0;
+    height: 10px;
+    display: block;
+    position: absolute;
+    // bottom: 0px;
+    right: 0px;
+    border-color: transparent transparent transparent  @chernii;
+    border-style: solid;
+    border-width: 0px 0px 120px 1200px; 
+    z-index: 15;
+  }
+  span {
+    display: block;
+    margin: 200px auto;
+    position: relative;
+    color: @belii;
+    font-size: 45pt;
+    text-align: center;
+    font-family: "Russo";
+    text-transform: uppercase;
+    z-index: 10;
+  }
+}
+// Команда
+.our-team {
+  width: 100%;
+  margin: 25px 0 150px;
+  position: relative;
+  z-index: 1;
+  figure {
+    width: 20%;
+    height: auto;
+    .flex;
+    .justify-center;
+    .align;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      .mouse-hover;
+    }
+    &:hover::before {
+      box-shadow: inset 0px 0px 50px 10px rgba(0, 0, 0, 1);
+      -webkit-box-shadow: inset 0px 0px 50px 10px rgba(0, 0, 0, 1);
+      -moz-box-shadow: inset 0px 0px 50px 10px rgba(0, 0, 0, 1);
+    }
+    &:hover figcaption {
+      width: 90%;
+      height: 60px;
+      opacity: 1;
+      border-color: transparent;
+      background: rgba(255, 138, 52, 0.7);
+      transform: translate(-50%, 0);
+      -webkit-transform: translate(-50%, 0);
+      -moz-transform: translate(-50%, 0);
+      animation: more-rev 1.5s linear infinite;
+      -webkit-animation: more-rev 1.5s linear infinite;
+    }
+    &:hover img {
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      object-fit: cover;
+      transition: 0.3s cubic-bezier(0, 0.83, 0.41, 1.51);
+      -webkit-transition: 0.3s cubic-bezier(0, 0.83, 0.41, 1.51);
+      -moz-transition: 0.3s cubic-bezier(0, 0.83, 0.41, 1.51);
+      filter: grayscale(1);
+      -webkit-filter: grayscale(1);
+      z-index: 4;
+    }
+    figcaption {
+      width: 100%;
+      height: 60px;
+      .flex;
+      .justify-center;
+      .align;
+      padding: 20px;
+      position: absolute;
+      left: 50%;
+      opacity: 0;
+      color: @belii;
+      font-size: 20px;
+      font-family: 'Courier';
+      text-align: center;
+      line-height: 20px;
+      background: rgba(255, 138, 52, 0.2);
+      transform: translate(-50%, 150px);
+      -webkit-transform: translate(-50%, 150px);
+      -moz-transform: translate(-50%, 150px);
+      transition: 0.3s cubic-bezier(0, 0.83, 0.41, 1.51);
+      -webkit-transition: 0.3s cubic-bezier(0, 0.83, 0.41, 1.51);
+      -moz-transition: 0.3s cubic-bezier(0, 0.83, 0.41, 1.51);
+      z-index: 10;
+    }
+  }
+}
+
+
+//////////////////////////////////////////////////////
+//////// Шестой блок - Кнопки
+
+.block-6 {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  span {
+    color: @oranj;
+    font-size: 45pt;
+    font-family: "Russo";
+    text-transform: uppercase;
+  }
+}
+.contact,
+.geolocation {
+  width: 100%;
+  margin: auto;
+  position: relative;
+  a {
+    width: 140px;
+    height: 140px;
+    display: block;
+    margin: 20px;
+    position: relative;
+    animation: scale-bt-rev 0.3s cubic-bezier(0.16, 0.57, 0.39, 2.4);
+    -webkit-animation: scale-bt-rev 0.3s cubic-bezier(0.16, 0.57, 0.39, 2.4);
+    z-index: 5;
+    &:hover {
+      animation: scale-bt 0.3s cubic-bezier(0.16, 0.57, 0.39, 2.4) forwards;
+      -webkit-animation: scale-bt 0.3s cubic-bezier(0.16, 0.57, 0.39, 2.4) forwards;
+      svg {
+        animation: scale-icon 0.3s cubic-bezier(0, 0.74, 0, 1.6) forwards;
+        -webkit-animation: scale-icon 0.3s cubic-bezier(0, 0.74, 0, 1.6) forwards;
+        animation-delay: 0.05s;
+        fill: @belii;
+      }
+    }
+  }
+}
+.contact a:hover .bt,
+.contact a:hover .bt::before,
+.contact a:hover .bt::after {
+  animation: rotate-bt 5s linear infinite;
+  -webkit-animation: rotate-bt 5s linear infinite;
+}
+.bt {
+  width: 112px;
+  height: 98px;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  background: no-repeat url(../images/bt3.svg);
+  z-index: 5;
+  &::before {
+    content: "";
+    width: 146px;
+    height: 132px;
+    display: block;
+    opacity: 0.4;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    transform-origin: center;
+    background: no-repeat url(../images/bt1.svg);
+    z-index: 3;
+  }
+  &::after {
+    content: "";
+    width: 125px;
+    height: 125px;
+    display: block;
+    opacity: 0.4;
+    position: absolute;
+    top: -15px;
+    left: -10px;
+    background: no-repeat url(../images/bt3.svg);
+    z-index: 4;
+  }
+}
+.fb,
+.insta,
+.phone,
+.mail,
+.geo {
+  width: 60px;
+  height: 60px;
+  display: block;
+  position: absolute;
+  top: 35px;
+  left: 40px;
+  fill: #000500;
+  animation: scale-icon-rev 0.3s cubic-bezier(0, 0.74, 0, 1.6);
+  -webkit-animation: scale-icon-rev 0.3s cubic-bezier(0, 0.74, 0, 1.6);
+  animation-delay: 0.05s;
+  z-index: 10;
+  .mouse-hover;
+}
+
+//////////////////////////////////////////////////////
+//////// Шестой блок - Контакты
+
+footer {
+  width: 100%;
+  height: auto;
+  position: relative;
+  color: @chernii;
+  font-family: "Courier";
+  background-color: @belii;
+  ul.footer-btns {
+    width: 100%;
+    height: 80px;
+    .flex;
+    .justify-center;
+    position: absolute;
+    top: 30px;
+    z-index: 15;
+    li {
+      margin: 0 10px;
+      a {
+        width: 80px;
+        height: 80px;
+        .flex;
+        .justify-center;
+        .align;
+        padding-bottom: 3px;
+        position: relative;
+        border-radius: 50%;
+        background: @chernii;
+        .mouse-hover;
+        &::before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 50%;
+          z-index: 1;
+        }
+        &:hover {
+          background: @belii;
+        }
+        &:hover svg {
+          fill: @chernii;
+        }
+        svg {
+          fill: @oranj;
+          .mouse-hover;
+        }
+
+        .icon-fb {
+          width: auto;
+          height: 40px;
+        }
+        .icon-vk {
+          width: 50px;
+          display: block;
+          position: relative;
+          top: 2px;
+          left: 0px;;
+        }
+        .icon-ins {
+          width: 40px;
+        }
+      }
+    }
+  }
+  .footer-box {
+    width: 100%;
+    height: auto;
+    .flex;
+    .justify-center;
+    .align;
+    .flex-column;
+    margin: 150px 0px 50px;
+    position: relative;
+    &:nth-last-of-type(1) {
+      border-left: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    > span {
+     width: 100%;
+     .flex;
+     .justify-center;
+     margin-bottom: 30px;
+     position: relative;
+     top: 0px;
+     font-size: 16pt;
+     text-transform: uppercase;
+    }
+    address {
+      .flex;
+      .justify-around;
+      font-style: normal;
+      font-size: 11pt;
+      line-height: 20px;
+    }
+    ul {
+      .flex;
+      .flex-column;
+      padding: 30px;
+    }
+    .friends {
+      width: 70%;
+      a {
+        width: 25%;
+        .flex;
+        .justify-center;
+        .align;
+        .flex-wrap;
+      }
+      img {
+        width: 80px;
+       .flex;
+      }
+    }
+  }
+  > span {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    color: @chernii;
+    font-family: "Courier";
+    background-color: @belii;
+    font-size: 10pt;
+    text-align: center;
+  }
+}
+
+
+/*||||||||||||||||||||||||||||||
+=========== Анимация ===========
+||||||||||||||||||||||||||||||*/
+
+/* Transition 0.3s */
+
+.mouse-hover {
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+}
+
+/* Базовый блок */
+@keyframes head {
+  0% {filter: brightness(1);}
+  100% {filter: brightness(5);}
+}
+@-webkit-keyframes head {
+  0% {filter: brightness(1);}
+  100% {filter: brightness(5);}
+}
+
+/* О театре */
+
+@keyframes more-rev {
+  0% {box-shadow: 0px 0px 10px 2px rgba(255, 138, 52, 1);}
+  35% {box-shadow: 0px 0px 40px 10px rgba(255, 138, 52, 0);}
+  100% {box-shadow: 0px 0px 40px 10px rgba(255, 138, 52, 0);}
+}
+@-webkit-keyframes more-rev {
+  0% {box-shadow: 0px 0px 10px 2px rgba(255, 138, 52, 1);}
+  35% {box-shadow: 0px 0px 40px 10px rgba(255, 138, 52, 0);}
+  100% {box-shadow: 0px 0px 40px 10px rgba(255, 138, 52, 0);}
+}
+@keyframes more-arrow {
+  0% {transform: translateY(0px) rotateZ(90deg); opacity: 1}
+  45% {transform: translateY(15px) rotateZ(90deg); opacity: 0}
+  55% {transform: translateY(-15px) rotateZ(90deg); opacity: 0}
+  100% {transform: translateY(0px) rotateZ(90deg); opacity: 1}
+}
+@-webkit-keyframes more-arrow {
+  0% {transform: translateY(0px) rotateZ(90deg); opacity: 1}
+  45% {transform: translateY(15px) rotateZ(90deg); opacity: 0}
+  55% {transform: translateY(-15px) rotateZ(90deg); opacity: 0}
+  100% {transform: translateY(0px) rotateZ(90deg); opacity: 1}
+}
+
+
+/* JQuery классы - О театре */
+@keyframes hide-about {
+  0% {height: 838px; opacity: 1; transform: translate3d(0px, 0px, 0px);}
+  100% {height: 0px; opacity: 0; transform: translate3d(-100px, 0px, 0px);}
+}
+@-webkit-keyframes hide-about {
+  0% {height: 838px; opacity: 1; transform: translate3d(0px, 0px, 0px);}
+  100% {height: 0px; opacity: 0; transform: translate3d(-100px, 0px, 0px);}
+}
+@keyframes hide-about-rev {
+  0% {height: 0px; opacity: 0; transform: translate3d(-100px, 0px, 0px);}
+  100% {height: 838px; opacity: 1; transform: translate3d(0px, 0px, 0px);}
+}
+@-webkit-keyframes hide-about-rev {
+  0% {height: 0px; opacity: 0; transform: translate3d(-100px, 0px, 0px);}
+  100% {height: 838px; opacity: 1; transform: translate3d(0px, 0px, 0px);}
+}
+@keyframes show-more {
+  100% {height: 100%; opacity: 1; transform: translate3d(0px, 0px, 0px);}
+}
+@-webkit-keyframes show-more {
+  100% {height: 100%; opacity: 1; transform: translate3d(0px, 0px, 0px);}
+}
+
+////////////////////////////////
+///////  АДАПТИВНОСТЬ
+// МАШТАБИРОВАНИЕ
+////////////////////////////////
+
+
+//////////////////////////////////////////////////////
+@media (max-width: 1220px) {
+
+////////////////////////////////////////
+//////// Базовый блок
+main {
+  width: 100%;
+}
+}
+//////////////////////////////////////////////////////
+@media (max-width: 1199px) {
+
+////////////////////////////////////////
+//////// Навигация
+#checkbox {
+  + label {
+    margin-left: 0px;
+    left: 15px;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+  }
+}
+
+////////////////////////////////////////
+//////// Седьмой блок - Контакты
+ footer {
+  .flex-wrap;
+ }
+.footer-box:nth-last-of-type(1) {
+  margin-top: 0px;
+  border-left: 0px;
+}
+}
+//////////////////////////////////////////////////////
+@media (max-width: 1199px) and (min-width: 780px){
+
+////////////////////////////////////////
+//////// Третий блок - Расписание
+// JS класс для Афиши
+.descript-all {
+  max-height: 890px !important;
+}
+
+////////////////////////////////////////
+//////// Пятый блок - Актёры
+.our-team {
+  figure {
+    width: 25%;
+  }
+}
+
+}
+//////////////////////////////////////////////////////
+@media (max-width: 779px) and (min-width: 480px){
+
+////////////////////////////////////////
+//////// Базовый блок
+.logo {
+  width: 400px;
+  height: 130px;
+  font-size: 30pt;
+  &::before {
+    right: -5px;
+    bottom: -12px;
+  }
+}
+
+////////////////////////////////////////
+//////// Первый блок - О нас
+.about {
+  width: 70%;
+}
+
+////////////////////////////////////////
+//////// Третий блок - Расписание
+// JS класс для Афиши
+.descript-all {
+  max-height: 1100px !important;
+}
+
+////////////////////////////////////////
+//////// Четвертый блок - Робот
+.parallax-robot {
+  top: -340px;
+  background-position: -400px -100px;
+}
+
+////////////////////////////////////////
+//////// Пятый блок - Актёры
+.our-team {
+  figure {
+    width: 33.33%;
+  }
+}
+
+////////////////////////////////////////
+//////// Шестой блок - Контакты
+footer {
+  ul.footer-btns {
+    top: 0px;
+  }
+}
+
+}
+///////// @media /////////////////////////////////////////////
+@media (max-width: 779px) {
+
+////////////////////////////////////////
+//////// Базовый блок
+.logo {
+  top: 65%;
+}
+
+////////////////////////////////////////
+//////// Первый блок - О нас
+.block-1 {
+  padding-top: 0px;
+}
+.about > span {
+  font-size: 37pt;
+}
+// Дополнительное описание о театре
+.director {
+  flex-direction: column-reverse;
+  -webkit-flex-direction: column-reverse;
+  text-align: center;
+  div:nth-last-of-type(1) {
+    padding-right: 0px;
+  }
+  div:nth-last-of-type(2) div {
+    left: 0px;
+  }
+}
+
+////////////////////////////////////////
+//////// Третий блок - Расписание
+.timetable {
+  width: 100%;
+  &::after {
+    left: 0px;
+  }
+  .description {
+    flex-flow: column;
+    figure {
+      margin: auto;
+    }
+    ul.info {
+      width: 100%;
+      margin-top: 15px;
+      li {
+        padding-left: 0;
+      }
+    }
+  }
+}
+// Кнопка показа содержимого
+.info-btn {
+  left: 0px;
+}
+
+////////////////////////////////////////
+//////// Четвертый блок - Робот
+.block-4 p:nth-of-type(1) {
+  width: 90%;
+  right: 10px;
+  bottom: 40px;
+}
+.block-4 p:nth-of-type(2) {
+  bottom: 15px;
+  right: 60px;
+  font-size: 8pt;
+}
+
+////////////////////////////////////////
+//////// Шестой блок - Контакты
+.friends {
+  width: 80%;
+}
+}
+//////////////////////////////////////////////////////
+@media (max-width: 479px) and (min-width: 320px){
+
+////////////////////////////////////////
+//////// Навигация
+nav {
+  ul.all-category {
+    &::after {
+      width: 310px;
+    }
+  }
+}
+
+////////////////////////////////////////
+//////// Базовый блок
+.logo {
+  width: 280px;
+  height: 130px;
+  font-size: 30pt;
+  &::before {
+    right: 50px;
+    bottom: -20px;
+  }
+}
+
+////////////////////////////////////////
+//////// Первый блок - О нас
+.about {
+  width: 100%;
+}
+.about p {
+  width: 96%;
+}
+
+////////////////////////////////////////
+//////// Третий блок - Расписание
+// JS класс для Афиши
+.descript-all {
+  max-height: 1300px !important;
+}
+
+////////////////////////////////////////
+//////// Четвертый блок - Робот
+.parallax-robot {
+  top: -400px;
+  background-position: -570px -100px;
+}
+.block-4 p:nth-of-type(1) {
+  font-size: 13pt;
+}
+.block-4 p:nth-of-type(2) {
+  font-size: 10pt;
+}
+
+////////////////////////////////////////
+//////// Пятый блок - Актёры
+.our-team {
+  figure {
+    width: 50%;
+  }
+}
+
+////////////////////////////////////////
+//////// Шестой блок - Контакты
+footer {
+  ul.footer-btns {
+    top: -10px;
+  }
+  .footer-box {
+    address {
+      .flex-column;
+      ul {
+        padding: 10px;
+      }
+    }
+
+  }
+}
+.footer-box:nth-last-of-type(1) {
+  margin-bottom: 0px;
+}
+address {
+  .flex-wrap;
+}
+.adress-box {
+  width: 280px;
+  margin: 10px auto;
+  padding-left: 0px;
+  p {
+    text-align: center;
+  }
+}
+.friends > a {
+  width: 50%;
+  margin-bottom: 50px;
+}
+}
+//////////////////////////////////////////////////////
+@media screen and (orientation:landscape) {
+nav {
+  overflow-y: auto;
+}
+}
+//////////////////////////////////////////////////////
+@media screen and (orientation:portrait) {
+nav {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+}

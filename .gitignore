@@ -1,0 +1,15 @@
+textolite/
+maria/
+Resource/
+resource/
+source/
+Source/
+Versio/
+versio/
+doc/
+old/
+images/original/
+images/old/
+.ftpconfig
+.htaccess
+nginx.conf

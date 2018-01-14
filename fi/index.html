@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VikArt - Contemporary Drama Theatre - Lab</title>
+<meta property="og:title" content="VikArt - Contemporary Drama Theatre - Lab">
+<meta property="og:site_name" content="vikart.fi">
+<meta property="og:description" content="Создаем профессиональную рекламу для вашего бизнеса, свадеб, празднечных мероприятий.">
+<meta name="description" content="Создаем профессиональную рекламу для вашего бизнеса, свадеб, празднечных мероприятий.">
+<meta name="author" content="ЖнецЪ ©">
+<meta name="google" content="notranslate">
+<meta name="google-site-verification" content="">
+<!-- <link rel="alternate" hreflang="ru" href="http://timamih.com/ru/">
+<link rel="alternate" hreflang="en" href="http://timamih.com/en/">
+<link rel="alternate" hreflang="fi" href="http://timamih.com/fi/">
+<link rel="icon" href="/icon/favicon.ico" type="images/icon">
+<link rel="shortcut icon" href="/icon/favicon.ico" type="images/icon"/>
+<link rel="icon" type="imagess/png" href="/icon/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="images/png" href="/icon/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="images/png" href="/icon/favicon-48x48.png" sizes="48x48">
+<link rel="icon" type="images/png" href="/icon/favicon-64x64.png" sizes="64x64"> -->
+<style type="text/css">
+
+/*//////////////////////////////////////////////////////
+//////// Загрузчик */
+.preloader, .bgloader { width: 100%; height: 100%; margin: 0px; top: 0px; left: 0px; right: 0px; bottom: 0px; z-index: 10000; }
+.preloader { position: fixed; }
+.bgloader { position: absolute; background: #1A1A1A; }
+.circle, .circle2 { position: absolute; top: 50%; left: 50%; opacity: 1; border: 5px solid transparent; border-radius: 100%; z-index: 10001; }
+.circle { width: 100px; height: 100px; margin: -50px 0px 0px -50px; border-right: 5px solid #B44D02; border-left: 5px solid #B44D02; animation: rotate 1s linear infinite; -webkit-animation: rotate 1s linear infinite; }
+@keyframes rotate {100% {transform: rotate3d(0, 0, 1, 360deg);}}
+@-webkit-keyframes rotate {100% {transform: rotate3d(0, 0, 1, 360deg);}}
+</style>
+</head>
+<body>
+<div class="preloader">
+  <div class="circle"></div>
+  <div class="circle2"></div>
+  <div class="bgloader"></div>
+</div>
+<input type="checkbox" id="checkbox">
+<label for="checkbox" title="Кнопка меню">
+  <span class="line-top"></span>
+  <span class="line-bottom"></span>
+  <p class="tooltip">Valikko</p>
+</label>
+<nav>
+  <ul class="all-category">
+    <li class="category">
+      <ul class="box-language">
+        <li onclick="location.href='../ru/index.html'" href="../fi/index.html">ru</li>
+        <li class="lang">fi</li>
+        <li onclick="location.href='../en/index.html'" href="../en/index.html">en</li>
+      </ul>
+    </li>
+    <li class="category">
+      <ul class="box-category">
+        <li><a class="link" href="#home">Alkuun</a></li>
+        <li><a class="link" href="#about">Meistä</a></li>
+        <li><a class="link" href="#bill">Juliste</a></li>
+        <li><a class="link" href="#team">Tiimi</a></li>
+        <li><a class="link" href="#gallery">Galleria</a></li>
+        <li><a class="link" href="#contact">Yhteystiedot</a></li>
+      </ul>
+    </li>
+    <li class="category">
+      <ul class="box-category add-bottom">
+        <ul class="btn-category">
+          <li><a href="https://www.facebook.com/vikartkaapelitehdas">
+            <svg class="icon-fb" viewBox="0 0 22.2 40.1">
+              <use xlink:href="../images/icons/icon_book.svg#icon">
+            </svg>
+          </a></li>
+          <li><a href="https://vk.com/vikartkaapelitehdas">
+            <svg class="icon-vk" viewBox="0 0 52.5 30.8">
+              <use xlink:href="../images/icons/icon_vk.svg#icon">
+            </svg>
+          </a></li>
+          <li><a href="https://instagram.com/vikartkaapelitehdas">
+            <svg class="icon-ins" viewBox="0 0 51.7 51.7">
+              <use xlink:href="../images/icons/icon_insta.svg#icon">
+            </svg>
+          </a></li>
+        </ul>
+      </ul>
+    </li>
+    <li class="category">
+      <ul class="box-category">
+        <li class="adress">
+          <p>Kaapelitehdas</p>
+          <p>Tallberginkatu 1 C</p>
+          <p>Kerros -1</p>
+          <p>00180 Helsinki</p></li>
+        <li class="adress-btn" title="google map">
+          <a href="https://goo.gl/maps/8VYey33TZQn">löydä meidät</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+<main>
+  <section class="block-0" id="home">
+    <div class="logo" id="link"></div>
+  </section>
+  <section class="block-1" id="about">
+    <div class="pics-block flex justify-center align flex-wrap">
+      <a href="../images/about/001.jpg" data-fancybox="group">
+        <img src="../images/about/001.jpg" alt="VikArt - Contemporary Drama Theatre - Lab">
+      </a>
+      <a href="../images/about/002.jpg" data-fancybox="group">
+        <img src="../images/about/002.jpg" alt="VikArt - Contemporary Drama Theatre - Lab">
+      </a>
+      <a href="../images/about/003.jpg" data-fancybox="group">
+        <img src="../images/about/003-min.jpg" alt="VikArt - Contemporary Drama Theatre - Lab">
+      </a>
+      <a href="../images/about/004.jpg" data-fancybox="group">
+        <img src="../images/about/004-min.jpg" alt="VikArt - Contemporary Drama Theatre - Lab">
+      </a>
+      <a href="../images/about/003.jpg" data-fancybox="group">
+        <img src="../images/about/003.jpg" alt="VikArt - Contemporary Drama Theatre - Lab">
+      </a>
+      <a href="../images/about/004.jpg" data-fancybox="group">
+        <img src="../images/about/004.jpg" alt="VikArt - Contemporary Drama Theatre - Lab">
+      </a>
+    </div>
+    <article class="about-us about">
+      <ul class="about-more">
+        <li>Meistä</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quis commodi in, earum nemo ad quae quasi dignissimos consectetur doloremque sed maiores nostrum, saepe quibusdam corrupti magnam cumque. Modi, repudiandae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quis commodi in, earum nemo ad quae quasi dignissimos consectetur doloremque sed maiores nostrum, saepe quibusdam corrupti magnam cumque. Modi, repudiandae.</li>
+        <li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam autem adipisci nihil. Sed id possimus eos delectus quo non deleniti iusto, minus, aliquid deserunt rerum nobis illo assumenda quod repudiandae?Magni odio animi omnis dolor dolorum eveniet, pariatur nemo dolores officia iure. Facilis nemo aspernatur praesentium possimus dicta tempora nulla vero corporis excepturi, est soluta totam necessitatibus. Cupiditate, dolores accusamus?</li>
+        <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae impedit inventore quas delectus a asperiores necessitatibus dicta vero. Harum cum totam impedit magni molestiae, consequatur sapiente blanditiis natus facilis eos!
+        Esse a nesciunt saepe corrupti excepturi quam modi rem voluptas blanditiis hic placeat dolore pariatur quod beatae, repellendus, quae assumenda recusandae reprehenderit, molestias ratione in autem suscipit nemo natus? Delectus.
+        Voluptatum molestias vel eveniet odit similique distinctio quisquam nostrum nihil pariatur eum? Optio, impedit dicta id vero ullam fugiat iure nisi veritatis voluptatem veniam alias aliquid ipsa, neque atque dolores?</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aperiam impedit veniam reiciendis, fugiat accusantium tempore natus minus id. Qui placeat quasi eos in expedita reprehenderit veritatis ullam officiis perferendis.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aperiam impedit veniam reiciendis, fugiat accusantium tempore natus minus id. Qui placeat quasi eos in expedita reprehenderit veritatis ullam officiis perferendis.</li>
+      </ul>
+      <button class="about-more-btn" onclick="">
+        <span>»</span>
+      </button>
+    </article>
+  </section>
+  <section class="block-2" id="bill">
+    <span>Juliste</span>
+  </section>
+  <section class="block-3 flex flex-column">
+      <!-- timetable начало для одной афиши -->
+      <!-- order: 1; - Отвечает за очередность блока -->
+      <!-- display: 'none' или 'block' - Отвечает, спрятать блок или показать -->
+    <article class="timetable" id="table1" style="order:1; display: block;">
+      <time>
+        <div>31</div>
+        <div>
+          <p>Joulukuu</p>
+          <p>19:00</p>
+        </div>
+      </time>
+      <div class="description">
+        <figure>
+           <!-- Ссылка на покупку билета -->
+          <a class="ticket-btn" href="https://holvi.com/shop/datalahti/section/vikart-theatre/spektakl-produkt-play-product/"><p>osta</p></a>
+          <!-- Постер -->
+          <img src="../images/bill/001.jpg" alt="poster">
+        </figure>
+         <!-- Кнопку спрятать или показать - 'none' или 'block' -->
+          <!-- При добавлении ещё 1 постера меняем цифру в параметре 'value' -->
+        <button class="info-btn" value="poster1" data-id="table1" onclick="">
+          <span>»</span>
+        </button>
+          <!--Тут меняем цифру в 'id' -->
+        <ul class="info" id="poster1">
+          <li>Слон говорит по-украински</li>
+          <li>драма (18+)</li>
+            <!-- Если нужен отдельный параграф, создаем или копируем  <li> тут текст </li>  -->
+          <li>В центре повествования молодой талантливый, ранимый и тонко чувствующий "полу-поэт","полу-художник","полу-драматург", страдающий от измен и предательства любимой.Чтобы отомстить ей, он заводит интрижку с замужней женщиной, которая, влюбившись по-настоящему, уходит от мужа. Нетипичный "герой нашего времени" и неожиданный поворот судьбы... Каков он? В центре повествования молодой талантливый, ранимый
+          </li>
+          <li><p><strong>Heittää: </strong>Захар Каккинен, Катерина Жербина, Валерия Матвиенко, Виола Пекканен</p>
+            <p><strong>Johtaja: </strong> Виктор Древицкий</p>
+            <p><strong>Näytelmäkirjailija: </strong>Ярослава Пулинович</p>
+          </li>
+          <li>
+            <p><strong>Paikkojen lukumäärä: </strong>30</p>
+            <p><strong>Suorituksen kesto: </strong>1 час 15 минут</p>
+          </li>
+          <li>
+            <p><strong>Kustannukset: </strong>10€ (участникам VikArt и студентам – 5€)</p>
+            <sub>Оплата наличными при входе или купить по ссылке выше</sub>
+          </li>
+        </ul>
+      </div>
+        <!-- нижний ARTICLE концовка блока афиши -->
+    </article>
+    <article class="timetable" id="table2" style="order:2; display: block;">
+      <time>
+        <div>07</div>
+        <div>
+          <p>Tammikuu</p>
+          <p>21:00</p>
+        </div>
+      </time>
+      <div class="description">
+        <figure>
+          <a class="ticket-btn" href="https://holvi.com/shop/datalahti/section/vikart-theatre/spektakl-kak-ia-stal/"><p>osta</p></a>
+          <img src="../images/bill/002.jpg" alt="poster">
+        </figure>
+        <button class="info-btn" value="poster2" data-id="table2" onclick="">
+          <span>»</span>
+        </button>
+        <ul class="info" id="poster2">
+          <li>Продукт"/Play "Product</li>
+          <li>драма (16+)</li>
+          <li>Мир, в котором столкнулись Ислам и Шоу Бизнес. Всё на показ и на продажу. И где-то проскользнёт истинное чувство, но какое? Борьба стериотипов и желаний в спектакле Виктора Древицкого.
+          </li>
+          <li>
+            <p><strong>Heittää: </strong>Дмитрий Запольский и Валерия Матвиенко.</p>
+            <p><strong>Johtaja: </strong>Виктор Древицкий</p>
+          </li>
+          <li>
+            <p><strong>Paikkojen lukumäärä: </strong>30</p>
+            <p><strong>Suorituksen kesto: </strong>1 час</p>
+          </li>
+          <li>
+            <p><strong>Kustannukset: </strong>10€ (участникам VikArt и студентам – 5€)</p>
+            <sub>Оплата наличными при входе или купить по ссылке выше</sub>
+          </li>
+        </ul>
+      </div>
+    </article>
+  </section>
+  <section class="block-4">
+    <div class="parallax-robot"></div>
+    <p>Люди устроены по-особому. Во многом они не столь разумны, как мы, роботы, поскольку их цепи в меньшей степени запрограммированы.</br> Говорят, что это имеет свои преимущества.</p>
+    <p>Айзек Азимов</p>
+  </section>
+  <section class="block-5" id="team">
+    <span>tiimi</span>
+    <div class="our-team flex justify-center flex-wrap">
+      <figure onclick="location.href='../fi/team.html#actor1'">
+        <div class="img-mask">
+          <img src="../images/team/Viktor_Drevitski.jpg" alt="Viktor_Drevitski">
+        </div>
+        <figcaption>Viktor Drevitski</figcaption>
+      </figure>
+      <figure onclick="location.href='../fi/team.html#actor2'">
+        <div class="img-mask">
+          <img src="../images/team/Anna_Shevchenko.jpg" alt="actor">
+        </div>
+        <figcaption>Анна Шевченко</figcaption>
+      </figure>
+      <figure onclick="location.href='../fi/team.html#actor3'">
+        <div class="img-mask">
+          <img src="../images/team/Riitta_Hakkarainen.jpg" alt="actor">
+        </div>
+        <figcaption>Риитта Хаккарайнен</figcaption>
+      </figure>
+      <figure onclick="location.href='../fi/team.html#actor4'">
+        <div class="img-mask">
+          <img src="../images/team/Andriy_Shevchenko.jpg" alt="actor">
+        </div>
+        <figcaption>Андрий Шевченко</figcaption>
+      </figure>
+      <figure onclick="location.href='../fi/team.html#actor5'">
+        <div class="img-mask">
+           <img src="../images/team/Tatjana_Pertceva.jpg" alt="actor">
+        </div>
+       <figcaption>Татьяна Перцева</figcaption>
+      </figure>
+    </div>
+    <button class="page" onclick="location.href='../fi/team.html'">
+      <span>kaikki</span>
+    </button>
+  </section>
+  <section class="block-6" id="gallery">
+    <span>galleria</span>
+    <div class="our-gallery flex justify-center flex-wrap">
+      <figure onclick="location.href='../fi/gallery.html#gallery1'">
+        <div class="img-mask">
+          <img src="../images/bill/005.jpg" alt="gallery">
+        </div>
+        <figcaption>Norsu puhuu ukrainaa</figcaption>
+      </figure>
+      <figure onclick="location.href='../fi/gallery.html#gallery2'">
+        <div class="img-mask">
+          <img src="../images/bill/001.jpg" alt="gallery">
+        </div>
+        <figcaption>Product</figcaption>
+      </figure>
+      <figure onclick="location.href='../fi/gallery.html#gallery3'">
+        <div class="img-mask">
+          <img src="../images/bill/002.jpg" alt="gallery">
+        </div>
+        <figcaption>Как я $тал..</figcaption>
+      </figure>
+      <figure onclick="location.href='../fi/gallery.html#gallery4'">
+        <div class="img-mask">
+          <img src="../images/bill/004.jpg" alt="gallery">
+        </div>
+        <figcaption>Мухаммад и Я</figcaption>
+      </figure>
+      <figure onclick="location.href='../fi/gallery.html#gallery5'">
+        <div class="img-mask">
+          <img src="../images/bill/003.jpg" alt="gallery">
+        </div>
+        <figcaption>Natasha's dream</figcaption>
+      </figure>
+    </div>
+    <button class="page" onclick="location.href='../fi/gallery.html'">
+      <span>lisää</span>
+    </button>
+  </section>
+  <footer class="flex" id="contact">
+    <ul class="footer-btns">
+      <li title="facebook.com">
+        <a href="https://www.facebook.com/vikartkaapelitehdas">
+          <svg class="icon-fb" viewBox="0 0 22.2 40.1">
+            <use xlink:href="../images/icons/icon_book.svg#icon">
+          </svg>
+        </a>
+      </li>
+      <li title="vk.com">
+        <a href="https://vk.com/vikartkaapelitehdas">
+          <svg class="icon-vk" viewBox="0 0 52.5 30.8">
+            <use xlink:href="../images/icons/icon_vk.svg#icon">
+          </svg>
+        </a>
+      </li>
+      <li title="instagram.com">
+        <a href="https://instagram.com/vikartkaapelitehdas">
+          <svg class="icon-ins" viewBox="0 0 51.7 51.7">
+            <use xlink:href="../images/icons/icon_insta.svg#icon">
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <div class="footer-box">
+      <span>VikArt</span>
+      <address>
+        <ul>
+          <li>Kaapelitehdas</li>
+          <li>Tallberginkatu 1 C</li>
+          <li>Kerros -1</li>
+          <li>00180 Helsinki</li>
+        </ul>
+        <ul>
+          <li>Johtaja</li>
+          <li>Viktor Drevitski</li>
+          <li><a href="tel:+358503245270">+358503245270</a></li>
+        </ul>
+      </address>
+    </div>
+    <div class="footer-box">
+      <span>Ystävämme</span>
+      <div class="friends flex justify-around flex-wrap">
+        <a href="http://praktikatheatre.ru/">
+          <img src="../images/praktikatheatre.svg" alt="www.praktikatheatre.ru">
+        </a>
+        <a href="https://royalcourttheatre.com/">
+          <img src="../images/royal-court.svg" alt="www.royalcourttheatre.com">
+        </a>
+        <a href="http://praktikatheatre.ru/">
+          <img src="../images/praktikatheatre.svg" alt="www.praktikatheatre.ru">
+        </a>
+        <a href="https://royalcourttheatre.com/">
+          <img src="../images/royal-court.svg" alt="www.royalcourttheatre.com">
+        </a>
+      </div>
+    </div>
+    <span>Vikart © 2018</span>
+  </footer>
+</main>
+</body>
+<link href="../css/main.css" type="text/css" rel="stylesheet">
+<script src="../js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="../js/vikart-jquery.js" type="text/javascript"></script>
+<link href="../js/jquery.fancybox.min.css" type="text/css" rel="stylesheet">
+<script src="../js/jquery.fancybox.min.js" type="text/javascript"></script>
+</html>

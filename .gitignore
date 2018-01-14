@@ -2,8 +2,11 @@ maria/
 resource/
 versio/
 doc/
-css/*.less
 images/original/
 .ftpconfig
 .htaccess
 nginx.conf
+*.less
+*.rar
+*.zip
+*.7z

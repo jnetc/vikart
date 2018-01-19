@@ -3,6 +3,7 @@ resource/
 versio/
 doc/
 images/original/
+images/gallery/
 .ftpconfig
 .htaccess
 nginx.conf

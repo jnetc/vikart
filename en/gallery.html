@@ -228,16 +228,13 @@
   $('.preloader').delay(600).fadeOut('fast');
   $('[data-fancybox]').fancybox({
     transitionEffect : "tube",
-    // thumbs : {
-    //     autoStart   : true
-    // },
+    thumbs : {
+        axis      : 'x'
+    },
     buttons : [
         'slideShow',
-        //'fullScreen',
+        'fullScreen',
         'thumbs',
-        //'share',
-        //'download',
-        //'zoom',
         'close'
     ]
   });

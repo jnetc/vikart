@@ -25,7 +25,7 @@ $('.link').click(function() {
     $('.block-1').toggleClass('block-padding');
     $('.pics-block').toggleClass('show-pics');
     $('.about-us').toggleClass('about');
-    if (!$('').hasClass('about-hide')) {
+    if (!$(this).hasClass('about-hide')) {
       window.setTimeout(function () {
         $('html,body').animate({scrollTop:$("#about").offset().top}, 700);
       }, 150);
@@ -49,28 +49,6 @@ $('.link').click(function() {
       }, 150);
     }
   });
-  
-// =============================
-
-  // Актёры
-  var $open = $('.actor');
-  var $close = $('.close-legenda');
-
-  $open.click(function () {
-    $(this).addClass('checked');
-    $('.actor').not(this).addClass('no-checked-actor');
-    $(this).children('.hover').addClass('hide-hover');
-    $(this).children('.legenda').addClass('show-legenda');
-    $(this).parent().addClass('bg-checked');
-  });
-  $close.click(function (e) {
-    e.stopPropagation(); // Используем если много разных запросов в DOM
-    $(this).parents('.actor').removeClass('checked');
-    $(this).parents('.actor').siblings().removeClass('no-checked-actor');
-    $(this).parent().siblings('.hover').removeClass('hide-hover');
-    $(this).parent('.legenda').removeClass('show-legenda');
-    $(this).parents('.our-team').removeClass('bg-checked');
-  });
 
 // =============================
 
@@ -79,23 +57,23 @@ $('.link').click(function() {
 
     // Классы
     var aboutEl = $('.about');
-    // var $animAbout = $('.about a');
     var robotEl = $('.parallax-robot');
     // Неизменны
-    var $winTop = $(this).scrollTop();
-    var $winHeight = $(this).height();
-    var $winBottom = ($winTop + $winHeight);
+    var winTop = $(this).scrollTop();
+    var winHeight = $(this).height();
+    var winBottom = (winTop + winHeight);
 
   // Паралакс
     var aboutHeight = aboutEl.height();
-    var $aboutOutWin = (aboutHeight + $winHeight);
-    if ($winTop <= $aboutOutWin) {
-      aboutEl.css('transform', 'translate3d(0px, -'+ $winTop/60 +'%, 0px)');
+    var aboutOutWin = (aboutHeight + winHeight);
+    if (winTop <= aboutOutWin) {
+      aboutEl.css('transform', 'translate3d(0px, -'+ winTop/60 +'%, 0px)');
     }
     var robotTop = robotEl.offset().top;
+        console.log(robotTop);
     var robotHeight = robotEl.height();
-    if (robotTop <= $winBottom) {
-      robotEl.css('transform', 'translate3d(0px, '+ $winTop /50 +'%, 0px)');
+    if (robotTop <= winBottom) {
+      robotEl.css('transform', 'translate3d(0px, '+ winTop /50 +'%, 0px)');
     }
 
   });
